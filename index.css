@@ -30,11 +30,10 @@
 }
 
 
-
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 
@@ -44,10 +43,16 @@ body {
     background-color: #FFFF;
 }
 
+#description{
+    background-color: #f7f7f7;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 main .textContent {
     display: flex;
     width: 80%;
-    background-color: rgb(255, 210, 63);
+    background-color: #FFD23FFF;
     margin: auto;
     margin-top: 50px;
 }
@@ -66,29 +71,67 @@ main .content {
     overflow: hidden;
 }
 
-main .textContent p{
+main .textContent p {
     font-family: Cool;
     font-size: 20px;
 }
 
-main #citationContainer{
+main #citationContainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
+    overflow: hidden;
     justify-content: center;
-
+    background-image: url('img/dots2.png');
+    background-repeat: repeat;
 }
 
-main .citation{
-    background-color: #36413e;
+main .citation {
+    background-color: #fcfcfc;
     border-radius: 25px;
     width: auto;
     margin-top: 50px;
-    width: 500px;
-    height: 200px;
-    color: white;
+    min-width: 400px;
+    width: auto;
+    min-height: 160px;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+main .citation .title {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+main .citation h2 {
+    color: #fab51a;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+main .citation img {
+    margin-left: 25px;
+}
+
+main .citation .title b {
+    color: #636363;
+}
+
+main .citation p {
+    width: 80%;
+    color: #909090;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 
