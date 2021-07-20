@@ -3,20 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Daedalus</title>
+    <meta property="og:site_name" content="Daedalus">
+    <meta property="og:title" content="Daedalus Paper and Spigot Plugin">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+          content="Daedalus is a project taking you back to Ancient Greece. Four human teams wander the Labyrinth of Daedalus, austere dwelling of the Minotaur and its minions.">
+    <meta property="og:url" content="http://mc-daedalus.com/">
+    <meta property="og:image" content="http://mc-daedalus.com/img/Logo_Daedalus.png">
+
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="img/Minotaur_Daedalus_blanc.png"/>
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener('scroll', function () {
+
+
+                if (window.scrollY > 80) {
+                    document.getElementById('navigation').classList.replace('navigation_top', 'navigation_sticky');
+                    document.getElementById('logoHeader').src = "img/Minotaur_Pixel_Art_noir.svg";
+                    document.getElementById('navigationWrapper').classList.replace('navigation_top', 'navigation_sticky');
+                } else {
+                    document.getElementById('navigationWrapper').classList.replace('navigation_sticky', 'navigation_top');
+                    document.getElementById('navigation').classList.replace('navigation_sticky', 'navigation_top');
+                    document.getElementById('logoHeader').src = "img/Minotaur_Daedalus_blanc.png";
+                }
+            });
+        });
+    </script>
 
 </head>
 <body>
 <header>
-
-    <div id="navigation">
-        <a href="#description">Description</a>
-        <a href="#avis">Avis</a>
-        <a href="#video">Vidéo</a>
-        <img src="img/Minotaur_Daedalus_blanc.png" width="125px" height="125px" alt="logo">
-        <a href="https://github.com/zelytra/Daedalus">GitHub</a>
-        <a href="https://github.com/zelytra/Daedalus/wiki">Wiki</a>
-        <a href="http://daedalus.zelytra.fr">Discord</a>
+    <div id="navigationWrapper" class="navigation_top">
+        <div id="navigation" class="navigation_top">
+            <img src="img/Minotaur_Daedalus_blanc.png" id="logoHeader" alt="logoHeader">
+            <a href="#description" class="nav-link">Description</a>
+            <a href="#download" class="nav-link">Téléchargement</a>
+            <a href="#video" class="nav-link">Vidéo</a>
+            <a href="http://github.mc-daedalus.com" target="_blank">GitHub</a>
+            <a href="http://wiki.mc-daedalus.com" target="_blank">Wiki</a>
+            <a href="http://discord.mc-daedalus.com" target="_blank">Discord</a>
+        </div>
     </div>
 
 
@@ -27,7 +55,7 @@
             <h1>DAEDALUS</h1>
             <h2>A minecraft mini game lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h2>
         </div>
-        <img src="img/Minotaur_Pixel_Art_noir.png" width="400px" height="400px" alt="logo">
+        <img src="img/Minotaur_Pixel_Art_noir.svg" width="400px" height="400px" alt="logo">
     </div>
 
     <div id="description">
@@ -44,12 +72,12 @@
                         Vous l'avez compris, chaque partie sera unique et les joueurs les plus explorateurs seront
                         récompensés !</p>
                 </div>
-                <img src="img/maze.png" width="600" height="750" style="object-fit: cover">
+                <img src="img/maze.jpg" width="600" height="750" style="object-fit: cover">
             </div>
         </div>
         <div class="content" style="background-color: #E5E5E5">
             <div class="subContent">
-                <img src="img/maze.png" width="600" height="750" style="object-fit: cover">
+                <img src="img/maze.jpg" width="600" height="750" style="object-fit: cover">
                 <div class="textContent" style="margin-left: 100px; margin-right: 0px;">
                     <h3>Un labyrinthe généré aléatoirement</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -98,7 +126,7 @@
                         Vel
                         elit scelerisque mauris pellentesque pulvinar</p>
                 </div>
-                <img src="img/maze.png" width="600" height="750" style="object-fit: cover">
+                <img src="img/maze.jpg" width="600" height="750" style="object-fit: cover">
             </div>
         </div>
 
@@ -127,32 +155,69 @@
             magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus. Sed id semper risus in hendrerit. </p>
     </div>
 
-    <div id="avis" style="background-color: #E5E5E5">
-        <h2>Avis</h2>
+    <div id="download" style="background-color: #E5E5E5">
+        <h2>Téléchargement</h2>
         <hr>
-        <div id="avisContainer">
-            <p class="arrow"><</p>
-            <div class="block">
-                <div class="title">
-                    <h5>Zelytra / Developer</h5>
-                    <img src="img/quote.png"width="65px" height="65px">
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus. </p>
-            </div>
-            <p class="arrow">></p>
-        </div>
-        <div id="avisBar">
-
+        <div id="downloadBlock">
+            <a href="https://github.com/zelytra/Daedalus/releases/download/0.8/Daedalus-1.0.jar">
+                <p>Daedalus-0.8.java</p>
+                <img src="img/download.svg" width="110px">
+            </a>
         </div>
     </div>
     <div id="video">
-
+        <h2>Vidéo</h2>
+        <hr>
+        <div class="videoBlock">
+            <iframe width="2032" height="879" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
     </div>
 
 </main>
 <footer>
+    <div class="upperColor" style="height: 51px;width: 100%;background-color: #FFD23F"></div>
 
+    <div class="footerContent" style="background-color: #FCC22B">
+        <div class="leftContent">
+            <h3>Créateurs</h3>
+            <a href="http://zelytra.fr" target="_blank">Zelytra</a>
+            <p>Spirit</p>
+            <p>Ichabodt</p>
+        </div>
+        <a href="#navigation"><img src="img/Minotaur_Daedalus_blanc.png" width="295px"></a>
+        <div class="rightContent"></a>
+            <a href="http://discord.mc-daedalus.com" target="_blank">Discord</a>
+            <a href="http://spigot.mc-daedalus.com" target="_blank">Spigot</a>
+            <a href="http://github.mc-daedalus.com" target="_blank">GitHub</a>
+            <a href="http://youtube.mc-daedalus.com" target="_blank">Youtube</a>
+        </div>
+    </div>
+    <div class="downColor" style="height: 51px;width: 100%;background-color: #FAB51A"></div>
 </footer>
 </body>
 </html>
+
+
+<!-- Partie avis en attente
+
+<h2>Avis</h2>
+<hr>
+<div id="avisContainer">
+    <p class="arrow"><</p>
+    <div class="block">
+        <div class="title">
+            <h5>Zelytra / Developer</h5>
+            <img src="img/quote.png"width="65px" height="65px">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus. </p>
+    </div>
+    <p class="arrow">></p>
+</div>
+<div id="avisBar">
+
+</div>
+--->
