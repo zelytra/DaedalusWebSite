@@ -1,62 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-
-@font-face {
-    font-family: "Grec";
-    src: url('DalekPinpointBold.ttf') ;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-
-/* width */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-
-/* Track */
-
-::-webkit-scrollbar-track {
-    background: none;
-}
-
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-    background: #ffcd35;
-}
-
-
-* {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    user-select: none
-}
-
-html,
-body {
-    height: 100%;
-    background-color: #FFFF;
-}
-
 header {
     background-image: url('img/wave_dark.svg'), url('img/wave.svg'), url('img/wave_light.svg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 514px;
+    height: 600px;
 
 }
+
 
 
 header .navigation_top {
@@ -66,7 +16,7 @@ header .navigation_top {
     justify-content: space-around;
     margin-right: auto;
     margin-left: auto;
-    width: 80%;
+    width: 100%;
     transition-duration: 500ms;
 
 }
@@ -74,12 +24,13 @@ header .navigation_top {
 header .navigation_top a {
     font-family: Poppins;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 45px;
     text-align: center;
     transition-duration: 500ms;
 }
-header .navigation_top a:hover{
+
+header .navigation_top a:hover {
     color: #1a1a1a;
     transition-duration: 250ms;
 }
@@ -91,7 +42,7 @@ header .navigation_top img {
 }
 
 
-header #navigationWrapper.navigation_sticky{
+header #navigationWrapper.navigation_sticky {
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: fixed;
@@ -108,7 +59,7 @@ header .navigation_sticky {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
     transition-duration: 500ms;
@@ -118,13 +69,13 @@ header .navigation_sticky {
 header .navigation_sticky a {
     font-family: Poppins;
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 45px;
     text-align: center;
     transition-duration: 500ms;
 }
 
-header .navigation_sticky a:hover{
+header .navigation_sticky a:hover {
     color: #fcc22b;
     transition-duration: 250ms;
 }
@@ -138,30 +89,34 @@ header .navigation_sticky img {
 main #firstContent {
     display: flex;
     flex-direction: row;
-
+    margin-top: -80px;
     align-items: center;
     justify-content: center;
 
 }
 
 main #firstContent .title {
-    width: 1000px;
+    width: 60%;
 }
 
 main #firstContent h1 {
     font-family: Grec;
     font-style: normal;
     font-weight: 300;
-    font-size: 144px;
+    font-size: 100px;
     line-height: 216px;
+}
+main #firstContent img {
+    width: 250px;
+    height: 250px;
 }
 
 main #firstContent h2 {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 30px;
+
     color: #565656;
 }
 
@@ -205,17 +160,21 @@ main .content {
 
 main .subContent {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 75%;
     margin-right: auto;
     margin-left: auto;
-    align-items: flex-start;
+    align-items: center;
 }
 
 main .subContent .textContent {
-    margin-right: 150px;
     overflow: hidden;
+}
+
+main .subContent .textContent.left {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 main .subContent h3 {
@@ -253,10 +212,10 @@ main .ratingContent {
 }
 
 main .ratingContent .block {
-    width: 500px;
-    height: 250px;
+    width: 300px;
+    height: 150px;
     background-color: white;
-    border-radius: 34px;
+    border-radius: 25px;
     justify-content: center;
 
 }
@@ -265,8 +224,8 @@ main .block h4 {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 115px;
-    line-height: 187px;
+    font-size: 80px;
+
     color: #FCC22B;
     text-align: center;
     height: 50%;
@@ -276,15 +235,16 @@ main .block p {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 25px;
     line-height: 90px;
     text-align: center;
 }
 
 main .block img[alt*="src"] {
-    margin-left: 44px;
-    margin-right: auto;
-    margin-top: 40px;
+    width: 80%;
+    height: auto;
+    display:block;
+    margin: 40px auto auto;
 }
 
 main #openSource {
@@ -301,7 +261,7 @@ main #openSource p {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 45px;
+    font-size: 35px;
     line-height: 67px;
     text-align: center;
 
@@ -408,6 +368,10 @@ footer h3 {
     color: white;
 }
 
+footer img{
+    width: 150px;
+}
+
 footer .leftContent p {
     font-family: Poppins;
     font-style: normal;
@@ -437,92 +401,8 @@ footer .rightContent a {
     color: white;
     transition-duration: 500ms;
 }
-footer a:hover{
+
+footer a:hover {
     color: #1a1a1a;
     transition-duration: 500ms;
 }
-
-/*
-main #avis {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 80px;
-
-}
-
-main #avis h2 {
-    font-family: Poppins;
-    text-align: center;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 60px;
-}
-
-main #avis #avisContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 65%;
-    margin: 50px auto;
-}
-
-main #avis #avisContainer .arrow {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 115px;
-    line-height: 172px;
-    display: flex;
-    align-items: center;
-
-    color: #FAB51A;
-
-}
-
-main #avis #avisContainer .block {
-
-    background-color: white;
-    border-radius: 28px;
-    padding: 55px;
-    width: 905px;
-    height: 300px;
-}
-
-main #avis .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 95%;
-}
-
-main #avis #avisContainer h5 {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 45px;
-    line-height: 67px;
-    color: #FAB51A;
-    margin-bottom: 20px;
-}
-
-
-main #avisContainer .block p {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 45px;
-    text-align: justify;
-
-    color: #565656;
-}*/
-
-
-
-
-

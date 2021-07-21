@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Daedalus</title>
@@ -11,23 +11,27 @@
     <meta property="og:url" content="http://mc-daedalus.com/">
     <meta property="og:image" content="http://mc-daedalus.com/img/Logo_Daedalus.png">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" media='screen and (min-width: 576px)' href="index_576.css"/>
+    <link rel="stylesheet" media='screen and (min-width: 768px)' href="index_768.css"/>
+    <link rel="stylesheet" media='screen and (min-width: 992px)' href="index_992.css"/>
+    <link rel="stylesheet" media='screen and (min-width: 1600px)' href="index_1200.css"/>
     <link rel="icon" type="image/png" href="img/Minotaur_Daedalus_blanc.png"/>
     <script type="text/javascript">
 
         document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener('scroll', function () {
 
-
                 if (window.scrollY > 80) {
                     document.getElementById('navigation').classList.replace('navigation_top', 'navigation_sticky');
-                    document.getElementById('logoHeader').src = "img/Minotaur_Pixel_Art_noir.svg";
+                    document.getElementById('logoHeader').src = "img/Minotaur_Pixel_Art_noir.png";
                     document.getElementById('navigationWrapper').classList.replace('navigation_top', 'navigation_sticky');
                 } else {
                     document.getElementById('navigationWrapper').classList.replace('navigation_sticky', 'navigation_top');
                     document.getElementById('navigation').classList.replace('navigation_sticky', 'navigation_top');
                     document.getElementById('logoHeader').src = "img/Minotaur_Daedalus_blanc.png";
                 }
+
             });
         });
     </script>
@@ -37,7 +41,7 @@
 <header>
     <div id="navigationWrapper" class="navigation_top">
         <div id="navigation" class="navigation_top">
-            <img src="img/Minotaur_Daedalus_blanc.png" id="logoHeader" alt="logoHeader">
+            <a href="#firstContent"><img src="img/Minotaur_Daedalus_blanc.png" id="logoHeader" alt="logoHeader"></a>
             <a href="#description" class="nav-link">Description</a>
             <a href="#download" class="nav-link">Téléchargement</a>
             <a href="#video" class="nav-link">Vidéo</a>
@@ -53,9 +57,9 @@
     <div id="firstContent">
         <div class="title">
             <h1>DAEDALUS</h1>
-            <h2>A minecraft mini game lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h2>
+            <h2>Un jeu d'exploration et de combat dans un labyrinthe en immersion dans la mythologie grecque</h2>
         </div>
-        <img src="img/Minotaur_Pixel_Art_noir.svg" width="400px" height="400px" alt="logo">
+        <img src="img/Minotaur_Pixel_Art_noir.png" width="400px" height="400px" alt="logo">
     </div>
 
     <div id="description">
@@ -65,66 +69,62 @@
             <div class="subContent">
                 <div class="textContent">
                     <h3>Un labyrinthe généré aléatoirement</h3>
-                    <p>Seuls les spawns des joueurs sont à des endroits fixes, ainsi que trois mines et une île de Circé
-                        (structure pour avoir de la nourriture) proche de chaque spawn.
-                        Le reste du labyrinthe est généré totalement aléatoirement, chaque temple, chaque donjon, chaque
-                        mine (autres que celles proches des spawns), pouvant apparaître n'importe où.
-                        Vous l'avez compris, chaque partie sera unique et les joueurs les plus explorateurs seront
-                        récompensés !</p>
+                    <p>Prenez place dans le labyrinthe de Dédale !
+                        Parmi les murs d'une surface de 1000 blocs carrés, vous trouverez différentes structures
+                        générées aléatoirement pour rendre votre exploration agréable et intéressante !
+                        Bien nombreuses ont celles qui vous attendent, non seulement des mines et des îles de Circé,
+                        mais encore des donjons et des temples. Chaque structure faite à la main sera directement
+                        reconnaissable.
+                        Les temples sont ainsi décorés de manière à rappeler le Dieu auquel son culte est voué. De même,
+                        les donjons, possèdent une tour pour embraser du regard le labyrinthe, et de nombreuses salles
+                        souterraines avec des mobs customs dangereux mais du bon stuff et de la netherite à la clef !
+                        En partant de votre camp de base fixe dans le labyrinthe, un bon sens de l'orientation est
+                        requis parmi les murs générés aléatoirement. Attention à l'équipe du Minotaure, apparaissant au
+                        centre du labyrinthe, qui est dangereuse pour les joueurs spawnant dans ses angles !
+                        Grâce à un algorithme de génération procédurale, chaque partie est unique dans sa génération,
+                        parfois frustrante, parfois chanceuse, et rejouable dès que voulu !
+
+                    </p>
                 </div>
                 <img src="img/maze.jpg" width="600" height="750" style="object-fit: cover">
             </div>
         </div>
         <div class="content" style="background-color: #E5E5E5">
             <div class="subContent">
-                <img src="img/maze.jpg" width="600" height="750" style="object-fit: cover">
-                <div class="textContent" style="margin-left: 100px; margin-right: 0px;">
-                    <h3>Un labyrinthe généré aléatoirement</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus. Sed id semper risus in
-                        hendrerit. Quam id leo in vitae turpis. Scelerisque varius morbi enim nunc faucibus a
-                        pellentesque
-                        sit
-                        amet. Massa vitae tortor condimentum lacinia quis vel. Amet nisl suscipit adipiscing bibendum
-                        est.
-                        Felis
-                        donec et odio pellentesque diam volutpat. Id velit ut tortor pretium viverra suspendisse
-                        potenti.
-                        Urna
-                        nec tincidunt praesent semper feugiat nibh sed. Ac turpis egestas integer eget aliquet nibh
-                        praesent
-                        tristique magna. Dui faucibus in ornare quam viverra. Morbi tincidunt augue interdum velit
-                        euismod.
-                        Vel
-                        elit scelerisque mauris pellentesque pulvinar</p>
+                <img src="img/temple.jpg" width="600" height="750" style="object-fit: cover">
+                <div class="textContent left">
+                    <h3>Des dieux uniques avec de nouvelles mécaniques</h3>
+                    <p>Grâce aux temples, chaque équipe hormis celle du Minotaure peut invoquer un dieu grec parmi les
+                        10 disponibles grâce à un craft custom.
+                        Invoquez alors le dieu de votre choix pour disposer d'un bonus collectif et d'un bonus propre au
+                        dieu pour affronter vos ennemis ! Chaque équipe aura donc un mode de jeu unique centré sur la
+                        divinité grecque choisie pour les combats !
+                        Par exemple, Dionysos inflige nausée aux adversaires et son équipe obtient un bonus aléatoire
+                        (effet de potion) pour décimer ses adversaires ! Ou encore Poséidon fera pleuvoir des tridents
+                        sur ses ennemis, et Zeus de puissants éclairs !
+                        Néanmoins, il vous faudra vaincre le féroce Gardien du temple pour accéder à ce pouvoir.
+                        Une fois le dieu invoqué, vous pouvez être localisés par les autres équipes via le Divine
+                        Tracker, item custom permettant initialement de pointer vers les temples.
+                        Ces dieux vous aideront à combattre la puissante équipe du Minotaure, présent d'entrée de jeu,
+                        redoutable grâce à sa vie plus importante ou encore sa charge contre les ennemis !</p>
                 </div>
             </div>
         </div>
         <div class="content">
             <div class="subContent">
                 <div class="textContent">
-                    <h3>Un labyrinthe généré aléatoirement</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus. Sed id semper risus in
-                        hendrerit. Quam id leo in vitae turpis. Scelerisque varius morbi enim nunc faucibus a
-                        pellentesque
-                        sit
-                        amet. Massa vitae tortor condimentum lacinia quis vel. Amet nisl suscipit adipiscing bibendum
-                        est.
-                        Felis
-                        donec et odio pellentesque diam volutpat. Id velit ut tortor pretium viverra suspendisse
-                        potenti.
-                        Urna
-                        nec tincidunt praesent semper feugiat nibh sed. Ac turpis egestas integer eget aliquet nibh
-                        praesent
-                        tristique magna. Dui faucibus in ornare quam viverra. Morbi tincidunt augue interdum velit
-                        euismod.
-                        Vel
-                        elit scelerisque mauris pellentesque pulvinar</p>
+                    <h3>Une survie différente des modes de jeu habituels</h3>
+                    <p>Finie la survie minage sans trouver de cavernes !
+                        Grâce à des loot tables propres à chaque structure, vous trouverez de quoi vous équiper pour
+                        démarrer efficacement votre survie.
+                        Puis trois mines à ciel ouvert avec respawns de minerais vous attendent proches de votre spawn,
+                        ainsi qu'une île de Circé qui vous fournira de quoi vous sustenter (pauvres marins d'Ulysse !).
+                        Dans le labyrinthe, de nombreux mobs hostiles rodent, mais les plus terribles sont ceux des
+                        donjons !
+                        Sur 4 étages, 4 niveaux de mobs customisés de plus en plus durs vous attendent, avec bon stuff,
+                        xp et netherite à la clef !
+                        En bref, Daedalus propose un départ rapide et équilibré puis une exploration rentable pour
+                        forger vos meilleurs armes !</p>
                 </div>
                 <img src="img/maze.jpg" width="600" height="750" style="object-fit: cover">
             </div>
